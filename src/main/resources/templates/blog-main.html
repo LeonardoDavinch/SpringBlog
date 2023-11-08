@@ -12,7 +12,7 @@
     <h1>Блог сайта</h1>
     <div th:each="el : ${posts}" class="alert alert-info mt-2">
         <h3 th:text="${el.title}"/>
-        <p th:text="${el.full_text}"/>
+        <p th:text="${el.anonse}"/>
         <a th:href="'/blog/'+${el.id}" class="btn btn-warning">Детально</a>
     </div>
 </div>
