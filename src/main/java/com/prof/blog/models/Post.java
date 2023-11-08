@@ -9,15 +9,18 @@ import jakarta.persistence.*;
 public class Post {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
-
-    @Column
     private  String title,anonse,full_text;
     private  int views;
 
-    public Post(Long id) {
-        this.id = id;
+    public Post(String title, String anonse, String full_text) {
+        this.title = title;
+        this.anonse = anonse;
+        this.full_text = full_text;
+    }
+
+    public Post() {
     }
 
     public Long getId() {
